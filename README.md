@@ -79,7 +79,7 @@ ___
 
 Вывод на терминале Rasberry Pi
 
-![image](https://user-images.githubusercontent.com/65661088/207605449-a1a33bd7-1690-4696-ba0f-8152693ce594.png)
+![Uploading image.png…]()
 
 Данные в Telegram Bot
 
