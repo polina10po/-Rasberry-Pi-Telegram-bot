@@ -14,6 +14,7 @@ ___
 
 ```
 sudo apt-get install python-pip
+sudo apt-get install python3
 sudo pip install telepot
 ```
 
