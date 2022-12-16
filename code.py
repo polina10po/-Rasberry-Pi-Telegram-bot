@@ -5,6 +5,7 @@ from telepot.loop import MessageLoop
 from picamera import PiCamera
 
 now = datetime.datetime.now()
+camera = PiCamera();   
 
 def handle(msg):
   chat_id = msg['chat']['id']
@@ -19,10 +20,9 @@ def handle(msg):
     bot.sendMessage(chat_id, "Time:" + str(now.hour) + ":" + str(now.minute))
   elif command == '/date':
     bot.sendMessage(chat_id, "Date:" + str(now.day) + "/" + str(now.month) + "/" + str(now.year))
-  elif command == '/image':
-    camera = PiCamera();   
+  elif command == '/image':   
     camera.start_preview()   
-    camera.capture('/home/img.jpg',resize=(640,480))   
+    camera.capture('/home/polina/img.jpg',resize=(640,480))   
     time.sleep(2)   
     camera.stop_preview()   
     camera.close()   
