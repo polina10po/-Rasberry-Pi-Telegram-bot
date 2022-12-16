@@ -26,11 +26,10 @@ def handle(msg):
     time.sleep(2)   
     camera.stop_preview()   
     camera.close()   
-    Seding picture   
-    bot.sendPhoto(chat_id, open('/home/img.jpg', 'rb'))
+    bot.sendPhoto(chat_id, open('/home/polina/img.jpg', 'rb'))
     bot.sendMessage(chat_id, str("Time:") + str(now.hour) + str(":") + str(now.minute))  
   elif command == '/file':
-    bot.sendMessage(chat_id, document = open('/home/telegram.txt'))
+    bot.sendMessage(chat_id, document = open('/home/polina/bot.py'))
     
 bot = telepot.Bot('5790505945:AAGf0gTk8LD3k4IXhdQog5YQezat2YyTFZQ')
 print(bot.getMe())
