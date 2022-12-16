@@ -14,11 +14,11 @@ def handle(msg):
   print(command)
   
   if command == '/hi':
-    bot.sendMessage(chat_id, str("Hi!"))
+    bot.sendMessage(chat_id, "Hi!")
   elif command == '/time':
-    bot.sendMessage(chat_id, str("Time:") + str(now.hour) + str(":") + str(now.minute))
+    bot.sendMessage(chat_id, "Time:" + str(now.hour) + ":" + str(now.minute))
   elif command == '/date':
-    bot.sendMessage(chat_id, str("Date:") + str(now.day) + str("/") + str(now.month) + str("/") + str(now.year))
+    bot.sendMessage(chat_id, "Date:" + str(now.day) + "/" + str(now.month) + "/" + str(now.year))
   elif command == '/image':
     camera = PiCamera();   
     camera.start_preview()   
@@ -35,7 +35,7 @@ def handle(msg):
 bot = telepot.Bot('5790505945:AAGf0gTk8LD3k4IXhdQog5YQezat2YyTFZQ')
 print(bot.getMe())
 
-MassegeLoop(bot, handle).run_as_thread()
+MessegeLoop(bot, handle).run_as_thread()
 print('Listening...')
 
 while 1:
