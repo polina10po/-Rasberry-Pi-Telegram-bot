@@ -77,14 +77,6 @@ ___
 
 **Проверка работы Telegram бота**
 
-Вывод на терминале Rasberry Pi
-
-![image](https://user-images.githubusercontent.com/65661088/207622307-7b7ae777-67ab-4e91-ac14-4b069094c70a.png)
-
-Данные в Telegram Bot
-
-![image](https://user-images.githubusercontent.com/65661088/207612641-17d95309-ce50-4ec0-92df-b97693790972.png)
-
 ___
 
 ### Заключение
