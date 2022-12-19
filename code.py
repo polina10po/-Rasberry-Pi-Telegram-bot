@@ -22,11 +22,11 @@ def handle(msg):
     bot.sendMessage(chat_id, "Date:" + str(now.day) + "/" + str(now.month) + "/" + str(now.year))
   elif command == '/image':   
     camera.start_preview()   
-    camera.capture('/home/polina/img.jpg',resize=(640,480))   
+    camera.capture('/home/orangepi/img.jpg',resize=(640,480))   
     time.sleep(2)   
     camera.stop_preview()   
     camera.close()   
-    bot.sendPhoto(chat_id, open('/home/polina/img.jpg', 'rb'))
+    bot.sendPhoto(chat_id, open('/home/orangepi/img.jpg', 'rb'))
     bot.sendMessage(chat_id, str("Time:") + str(now.hour) + str(":") + str(now.minute))  
   elif command == '/file':
     bot.sendMessage(chat_id, document = open('/home/polina/bot.py'))
