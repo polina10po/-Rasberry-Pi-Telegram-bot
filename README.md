@@ -14,8 +14,9 @@ ___
 
 ```
 sudo apt-get install python-pip
-sudo apt-get install python3
+sudo apt-get install python
 sudo pip install telepot
+sudo pip install opencv-python
 ```
 
 Подключаем библиотеку telepot для управления телеграмм ботом. Библиотеки time и datetime нужны для считывания текущего времени в Rasberry Pi. 
@@ -77,6 +78,8 @@ bot.sendMessage(chat_id, open('/home/img.jpg'))
 ___
 
 **Проверка работы Telegram бота**
+![image](https://user-images.githubusercontent.com/65661088/208456591-c58b8020-9a5b-4fcc-82b5-8d40bebc3ade.png)
+
 
 ___
 
