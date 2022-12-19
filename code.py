@@ -2,10 +2,10 @@ import time
 import datetime
 import telepot
 from telepot.loop import MessageLoop
-from picamera import PiCamera
+import cv2
 
 now = datetime.datetime.now()
-camera = PiCamera()
+cap = cv2.VideoCapture(0)
 
 def handle(msg):
     chat_id = msg['chat']['id']
@@ -19,14 +19,15 @@ def handle(msg):
     elif command == '/file':
         bot.sendDocument(chat_id, document = open('/home/orangepi/bot.py'))
     elif command == '/image':
-        camera.start_preview()
-        camera.capture('/home/orangepi/img.jpg', resize(640, 480))
-        camera.stop_preview()
-        camera.close()
-        bot.sendPhoto(chat_id, open('/home/orangepi/img.jpg'))
+        ret, frame = cap.read()
+        cv2.imwrite("photo.jpg", frame)
+        bot.sendPhoto(chat_id, open('/home/orangepi/photo.jpg'))
 
 bot = telepot.Bot('5790505945:AAGf0gTk8LD3k4IXhdQog5YQezat2YyTFZQ')
 MessageLoop(bot, handle).run_as_thread()
 
 while 1:
     time.sleep(10)
+
+
+
